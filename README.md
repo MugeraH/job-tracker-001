@@ -1,7 +1,7 @@
-# SIDE PROJECT STARTER TEMPLATE
+# SIDE PROJECT : JOB TRACKER
 
-This is my starter template for my side projects, Its still a work in progress👷‍♂️
-🕙
+Sample application to help you keep track of  job applications you make
+
 
 #### Technologies used
 - Next js(React) with TS support
