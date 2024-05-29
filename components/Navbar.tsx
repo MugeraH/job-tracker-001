@@ -20,7 +20,7 @@ type Props = {};
 
 function Navbar({}: Props) {
   return (
-    <header className=" sm:flex sm:justify-between py-1 px-0 mb-2 border-b ">
+    <header className=" sm:flex sm:justify-between py-2 px-0 mb-2 border-b ">
       <div className="mx-auto w-full max-w-9xl">
         <div className="relative px-4 sm:px-6 lg:px-8 flex  h-16 items-center justify-between w-full">
           <div className="flex items-center">
@@ -43,7 +43,7 @@ function Navbar({}: Props) {
               </SheetContent>
             </Sheet> */}
             <Link href="/" className="ml-4 lg:ml-0">
-              <h1 className="text-xl font-bold">My Jobs</h1>
+              <h1 className="text-xl font-bold">Job Tracker</h1>
             </Link>
           </div>
 
