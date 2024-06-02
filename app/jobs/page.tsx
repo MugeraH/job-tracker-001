@@ -3,8 +3,9 @@
 import { jobApplications } from "@/utils/data";
 import React from "react";
 import { DataTable } from "./data-table";
-import { JobApplication, columns } from "./colums";
+import { columns } from "./colums";
 import Container from "@/components/Container";
+import { JobApplication } from "@/models/jobApplication.model";
 
 type Props = {};
 

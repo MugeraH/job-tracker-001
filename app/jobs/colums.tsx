@@ -12,21 +12,7 @@ import { jobApplications } from "@/utils/data";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
-export type JobApplication = {
-  id: string;
-  companyName: string;
-  companyWebsite: string;
-  jobTitle: string;
-  position: string;
-  stage: string;
-  applicationDate: string | Date;
-  applicationResponseDate: string | Date;
-
-  referalStatus: string;
-  referalResponse: string;
-
-  //   status: "pending" | "processing" | "success" | "failed";
-};
+import { JobApplication } from "@/models/jobApplication.model";
 
 export const columns: ColumnDef<JobApplication>[] = [
   //   {
@@ -117,37 +103,41 @@ export const columns: ColumnDef<JobApplication>[] = [
     accessorKey: "referalResponse",
     header: "Referal Response",
   },
-  {
-    id: "actions",
-    header: "Actions",
-    cell: ({ row }) => {
-      const jobApplication = row.original;
+  // {
+    // id: "actions",
+    // header: "Actions",
+    // cell: ({ row }) => {
+    //   const jobApplication = row.original;
 
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() =>
-                navigator.clipboard.writeText(jobApplication.companyName)
-              }
-            >
-              Copy payment ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      );
-    },
-  },
+    //   return (
+    //     <DropdownMenu>
+    //       <DropdownMenuTrigger asChild>
+    //         <Button variant="ghost" className="h-8 w-8 p-0">
+    //           <span className="sr-only">Open menu</span>
+    //           <MoreHorizontal className="h-4 w-4" />
+    //         </Button>
+    //       </DropdownMenuTrigger>
+    //       <DropdownMenuContent align="end">
+    //         <DropdownMenuLabel>Actions</DropdownMenuLabel>
+    //         <DropdownMenuItem
+    //           onClick={() =>
+    //             navigator.clipboard.writeText(jobApplication.companyName)
+    //           }
+    //         >
+    //           Edit
+    //         </DropdownMenuItem>
+    //         <DropdownMenuItem
+    //           onClick={() =>
+    //             navigator.clipboard.writeText(jobApplication.companyName)
+    //           }
+    //         >
+    //           Delete
+    //         </DropdownMenuItem>
+    //       </DropdownMenuContent>
+    //     </DropdownMenu>
+    //   );
+    // },
+  // },
 ];
 
 //   {
